@@ -22,14 +22,14 @@ module.exports.detail = (req, res, next) => {
         .catch((error) => next(error));
 }
 
-module.exports.delete = (res, req, next) => {               /**SOLUCIONADO!!!!!!*/
-  const { id } = req.params.id;
+module.exports.delete = (req, res, next) => {   
+  const id = req.params.id;
   Event.findByIdAndDelete(id)
-    .then((event) => {                                      /**ERA EL PARÉNTESIS DE "event" de la 27 */
+    .then((event) => {                                      
       if(!event) {
         next(createError(404, 'Event not found'))
       } else {
-        res.render('/events')
+        res.redirect('/events');
       }
     })
     .catch((error) => next(error));
