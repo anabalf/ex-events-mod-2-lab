@@ -1,0 +1,15 @@
+<a href="/create-event" class="btn btn-primary" role="button">Create an event</a>
+<div class="col">
+    {{#each events as |event|}}
+    <div class="card ga-2 mb-3 text-bg-dark">
+        <img src="{{event.image}}" class="object-fit-cover" alt="{{event.title}}" height="300px" />
+        <div class="card-body">
+            <h5 class="card-title text-center">{{event.title}}</h5>
+            <div class="text-center"><a href="events/{{event.id}}" class="btn btn-danger m">View event</a></div>
+            <div>
+                <p>{{event.start}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

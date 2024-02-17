@@ -1,7 +1,7 @@
 {
   "name": "ex-events-mod-2-lab",
   "version": "1.0.0",
-  "description": "",
+  "description": "En este laboratorio repasaremos los conceptos principales del módulo 2:  -\tCreación de un proyecto Express desde 0 -\tPlantillas de HBS - Modelos de Mongoose -\tCRUDs -\tFormularios",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "hbs": "^4.2.0",
     "http-errors": "^2.0.0",
@@ -19,5 +21,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
+  },
+  "bin": {
+    "ex-events-mod-2-lab": "bin/seeds.js"
   }
 }

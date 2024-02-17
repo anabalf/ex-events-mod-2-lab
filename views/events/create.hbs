@@ -1,0 +1,10 @@
+<form action="/create-event" method="post" enctype="application/x-www-form-urlencoded">
+
+{{!-- TITULO --}}
+
+<input type="text" name="title" value="{{event.title}}" class="{{#if errors.title }}is-invalid{{/if}}">
+{{#if errors.title }}<div class="invalid-feedback">{{errors.title}}</div>{{/if}}
+<input type="text" name="description" value="{{event.description}}" class="{{#if errors.description }}is-invalid{{/if}}">
+{{#if errors.description }}<div class="invalid-feedback">{{errors.description}}</div>{{/if}}
+<button type="submit" href="/">Create event</button>
+</form>
